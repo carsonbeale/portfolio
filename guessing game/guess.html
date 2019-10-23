@@ -1,0 +1,30 @@
+<html>
+    <body>
+
+    </body>
+    <script>
+var x = Math.floor(Math.random() * 20) + 1; //This selects a random number between 1-20 and sets that number to the variable x
+var turns= 5
+var hint='Guess my number bewteen 1-20'
+var i;
+for (i=turns; i>0; i--) {
+    var guess = prompt(hint + ' You have ' + turns + ' guesses left.');
+
+    guess= Number(guess)
+    if (guess === x) {
+        document.write('You won!');
+        i = 0;
+    } else {
+        if(guess < x){
+        var hint='Too small'
+        }
+        if(guess > x){
+        var hint='Too big'
+        }
+    }
+    turns--;
+}
+window.alert('The correct number was '+ x)
+
+    </script>
+</html>
