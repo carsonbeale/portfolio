@@ -1,0 +1,20 @@
+#title {
+ color: forestgreen;
+ font-family: "Arial";
+ font-size: 50px;
+ position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -130px;
+  margin-left: -200px;
+
+}
+
+form{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -100px;
+   
+}
