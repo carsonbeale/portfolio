@@ -1,5 +1,5 @@
 var rgb = getAverageRGB(document.getElementById('i'));
-document.body.style.backgroundColor = 'rgb('+rgb.r+','+rgb.g+','+rgb.b+')';
+// document.body.style.backgroundColor = 'rgb('+rgb.r+','+rgb.g+','+rgb.b+')';
 document.getElementById('color').innerHTML = rgb.r+','+rgb.g+','+rgb.b;
 
 function getAverageRGB(imgEl) {
