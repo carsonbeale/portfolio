@@ -30,3 +30,19 @@ i{
 color{
     
 }
+.palette {
+    float: left;
+    width: 200px;
+}
+.palette > div { 
+    width: 20px; 
+    height: 20px; 
+    background-color: var(--color);
+    margin: 2px;
+    &::after {
+        content: attr(color);
+        font-family: monospace;
+        margin-left: 24px;
+        white-space: nowrap;
+    }
+}
