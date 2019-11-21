@@ -18,10 +18,11 @@ image.onload = () => {
     const colors =  colorThief.getPalette(image, swatches);    
     while (palette.firstChild) palette.removeChild(palette.firstChild);
     colors.reduce( (palette,rgb) => {
-        const color = `rgb(${rgb[0]}, ${rgb[1]}, ${rgb[2]})`;        
+        const color = `rgb(${rgb[0]}, ${rgb[1]}, ${rgb[2]})`;      
         const swatch = document.createElement('div');
         swatch.style.setProperty('--color', color);
         swatch.setAttribute('color', color);
+        swatch.innerHTML = '<p style="padding-left: 25px">' + color + '</p>'
         palette.appendChild(swatch);
         return palette;
     }, palette)
