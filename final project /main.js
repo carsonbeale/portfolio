@@ -9,7 +9,7 @@ window.onload = function(){
         image.src = URL.createObjectURL(input.files[0])
     }
 
-    const swatches = 12;
+    const swatches = 10;
 
 
 

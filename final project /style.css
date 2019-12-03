@@ -1,12 +1,13 @@
 #title {
- color: forestgreen;
+ color:rgb(8, 8, 54);
  font-family: "Arial";
  font-size: 50px;
  position: fixed;
   top: 50%;
   left: 50%;
-  margin-top: -130px;
-  margin-left: -200px;
+  margin-top:-120px;
+ margin-left: -240px;
+  box-align: center;
 
 }
 
@@ -15,32 +16,33 @@ form{
     top: 50%;
     left: 50%;
     margin-top: -50px;
-    margin-left: -100px;
+margin-left: -100px; 
    
-}
-i{
-   
- 
 }
 
 .preview{
     display: inline-block;
+    margin-top: -5px;
+    margin-left: -10px;
 }
 
-color{
-    
-}
 .palette {
     float: left;
+    display: inline-block
     width: 200px;
+
 }
 .palette > div { 
-    width: 20px; 
-    height: 20px; 
+    display: inline-block;
+    width: 160px; 
+    height: 160px; 
     background-color: var(--color);
-    margin: 2px;
+    margin: 10px;
+    flex-flow: row;
+
     
+    display:block
     font-family: Helvetica;
-    margin-left: 24px;
+    margin:50;
     white-space: nowrap;
 }
