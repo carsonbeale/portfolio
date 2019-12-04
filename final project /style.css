@@ -20,6 +20,23 @@ margin-left: -100px;
    
 }
 
+* {
+    box-sizing: border-box;
+  }
+
+.column {
+    float: left;
+    width: 12.5%;
+    padding: 10px;
+    height: 200px; 
+}
+
+#row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 .preview{
     display: inline-block;
     margin-top: -5px;
@@ -28,7 +45,7 @@ margin-left: -100px;
 
 .palette {
     float: left;
-    display: inline-block
+    display: inline-block;
     width: 200px;
 
 }
@@ -41,7 +58,7 @@ margin-left: -100px;
     flex-flow: row;
 
     
-    display:block
+    display:block;
     font-family: Helvetica;
     margin:50;
     white-space: nowrap;

@@ -11,21 +11,24 @@ window.onload = function(){
 
     const swatches = 10;
 
+    var ancestor = document.getElementById('row'),
+    descendents = ancestor.getElementsByTagName('SECTION');
 
+    image.onload = () => {
+        URL.revokeObjectURL(image.src);
+        const colors =  colorThief.getPalette(image, swatches); 
+        let index = 0   
+        colors.reduce( (palette,rgb) => {
+            const color = `rgb(${rgb[0]}, ${rgb[1]}, ${rgb[2]})`; 
+            if (descendents[index] != null){
+                const swatch = descendents[index];
 
-image.onload = () => {
-    URL.revokeObjectURL(image.src);
-    const colors =  colorThief.getPalette(image, swatches);    
-    while (palette.firstChild) palette.removeChild(palette.firstChild);
-    colors.reduce( (palette,rgb) => {
-        const color = `rgb(${rgb[0]}, ${rgb[1]}, ${rgb[2]})`;      
-        const swatch = document.createElement('div');
-        swatch.style.setProperty('--color', color);
-        swatch.setAttribute('color', color);
-        swatch.innerHTML = '<p style="padding-left: 25px">' + color + '</p>'
-        palette.appendChild(swatch);
-        return palette;
-    }, palette)
-}
+                swatch.setAttribute('style', 'background-color: ' + color);
+                swatch.innerHTML = '<p style="padding-left: 25px">' + color + '</p>'
+                index = index + 1
+            }     
+            return palette;
+        }, palette)
+    }
 
 }
